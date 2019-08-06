@@ -84,4 +84,5 @@ var app = new Vue({
       this.currentUser = null
       window.location.reload()
     }
+  }
   })                                                               

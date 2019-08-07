@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/Vue-demo/test6/resumer/dist',
+    assetsPublicPath: '/Vue-demo/test7/resumer/dist',
 
 
 

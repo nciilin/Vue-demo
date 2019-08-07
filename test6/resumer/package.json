@@ -15,7 +15,8 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webpack-dev-server": "^3.1.11"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -67,7 +68,6 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-dev-server": "^2.11.5",
     "webpack-merge": "^4.1.0"
   },
   "engines": {

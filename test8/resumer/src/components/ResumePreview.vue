@@ -9,7 +9,7 @@
       </p>
     </section>
 
-    <section data-name="projects" v-show="resume.education">
+    <section data-name="projects" v-show="resume.projects">
       <h2>项目经历</h2>
       <ol>
         <li v-for="item in resume.projects">
@@ -95,7 +95,7 @@ export default {
   }
   p {
     white-space: pre-line;
-  }
+  } 
   section {
     > h2:first-child {
       background: #ddd;
@@ -123,16 +123,16 @@ export default {
         margin-bottom: 0.3em;
       }
     }
-    section[data-name="education"] {
-      li {
-        line-height: 1.5;
-      }
+  }
+  section[data-name="education"] {
+    li {
+      line-height: 1.5;
     }
   }
-  section[data-name="contacts"]{
-      td:first-child{
-        padding-right: 1em;
-      }
+  section[data-name="contacts"] {
+    td:first-child {
+      padding-right: 1em;
     }
+  }
 }
 </style>

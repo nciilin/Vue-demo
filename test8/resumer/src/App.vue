@@ -1,12 +1,14 @@
 <template>
-  <div class="page">
-    <header>
-      <Topbar />
-    </header>
-    <main>
-      <ResumeEditor />
-      <ResumePreview />
-    </main>
+  <div>
+    <div class="page">
+      <header>
+        <Topbar />
+      </header>
+      <main>
+        <ResumeEditor />
+        <ResumePreview />
+      </main>
+    </div>
   </div>
 </template>
 
@@ -18,7 +20,9 @@ import ResumeEditor from "./components/ResumeEditor";
 import ResumePreview from "./components/ResumePreview";
 import icons from "./assets/icons";
 
-import store from './store/index'
+import store from "./store/index";
+import AV from "./lib/leancloud";
+import getAVUser from "./lib/getAVUser";
 
 export default {
   name: "App",
@@ -26,6 +30,12 @@ export default {
   components: { Topbar, ResumeEditor, ResumePreview },
   created() {
     document.body.insertAdjacentHTML("afterbegin", icons);
+    let state = localStorage.getItem("state");
+    if (state) {
+      state = JSON.parse(state);
+    }
+    this.$store.commit("initState", state);
+    this.$store.commit("setUser", getAVUser());
   }
 };
 </script>
